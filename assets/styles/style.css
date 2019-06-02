@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+:root {
+    --curr-bg-color: #C4C4C4;
+    --prev-bg-color: #41F795;
+    --animation: #C4C4C4;
+    --width-animation: 252px;
+    --height-animation: 264px;
+    --top-animation: 70px;
+    --right-animation: 32px;
+    --margin: 0;
+}
+
+body {
+    width: 1650px;
+    height: 900px;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    width: 196px;
+    height: 48px;
+    align-self: center;
+    display: flex;
+    margin-left: 18px;
+
+}
+
+ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+
+header {
+    height: 48px;
+    width: 100%;
+    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, .2);
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+
+.nav {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 8px;
+    top: 0;
+}
+
+.task-name-container {
+    margin-left: 71px;
+    padding-top: 8px;
+}
+
+.task-name {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.menu {
+    position: absolute;
+    width: 12px;
+    height: 24px;
+    right: 16px;
+    top: 8px;
+}
+
+.panel {
+    position: absolute;
+    width: 228px;
+    height: 246px;
+    left: 29px;
+    top: 127px;
+    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, .2);
+}
+
+.color-panel {
+    position: absolute;
+    width: 228px;
+    height: 380px;
+    left: 29px;
+    top: 465px;
+    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, .2);
+}
+
+.color-panel span {
+    margin-left: 38px;
+}
+
+li:nth-child(2) {
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+
+.edit-panel {
+    position: absolute;
+    width: 736px;
+    height: 711px;
+    right: 390px;
+    top: 127px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.list-scroller {
+    width: 228px;
+    height: 782px;
+    margin-left: 274px;
+    margin-top: 65px;
+    box-shadow: 0 6px 8px -4px rgba(0, 0, 0, .2);
+    overflow: scroll;
+}
+
+
+.animation-panel {
+    position: fixed;
+    width: var(--width-animation);
+    height: var(--height-animation);
+    right: var(--right-animation);
+    top: var(--top-animation);
+
+}
+
+.figure {
+    flex: 1 0 20px;
+    height: 20px;
+    background: #C4C4C4;
+    /*margin-left: 8px;*/
+}
+
+.figure1 {
+    flex: 1 0 7px;
+    height: 7px;
+    background: #C4C4C4;
+    /*margin-left: 8px;*/
+}
+
+.frame {
+    width: 224px;
+    height: 224px;
+}
+
+li:nth-child(3):before {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.19);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 114px;
+}
+
+
+button span {
+    font-family: Roboto, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 34px;
+    color: rgba(0, 0, 0, 0.541327);
+}
+
+.color-panel button:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    content: "";
+    position: absolute;
+}
+
+
+.color-panel :nth-child(1) button:before {
+    background: var(--curr-bg-color);
+}
+
+.color-panel :nth-child(2) button:before {
+    background: var(--prev-bg-color);
+}
+
+.color-panel :nth-child(3) button:before {
+    background: #F74141;
+}
+
+.color-panel :nth-child(4) button:before {
+    background: #41B6F7;
+}
+
+.color-panel :nth-child(5) button:before {
+    background: #0abe59;
+}
+
+.color-panel :nth-child(6) button:before {
+    background: #800080;
+}
+
+.color-panel :nth-child(7) button:before {
+    background: #a52a2a;
+}
+
+.item-scroller {
+    width: 224px;
+    height: 294px;
+
+}
+
+.frames{
+    transform: scale(0.8);
+    height: 73%;
+    width: 98%;
+    margin-top: var(--margin);
+}
+
+.del{
+    background: #C4C4C4;
+}
+
+.copy{
+    background: purple;
+    margin-left: 20px;
+}
+
+#increase{
+    transform: scale(4);
+    margin-top: 10px;
+    margin-left:12px;
+}
+
+.fps{
+    margin-left:6%;
+}
+
+#fps-label{
+    width: 167px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 22px;
+}
+
+#list-image-animation img {
+    display: none;
+}
+#list-image-animation img:first-child {
+    display: block;
+}
+
+.fps-input{
+    margin-top: 10px;
+}

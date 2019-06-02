@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pallete</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+    <script src="assets/increase.js"></script>
+</head>
+<body>
+<section class="header">
+    <div class="header-container">
+        <nav class="nav-container">
+            <div class="nav">
+                <button type="button"><img src="assets/images/nav%20icon.png" alt=""/></button>
+            </div>
+            <div class="task-name-container">
+                <h1 class="task-name">CodeJam - Pallete</h1>
+            </div>
+            <div class="menu">
+                <button type="button"><img src="assets/images/menu%20icon.png" alt=""/></button>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<section class="main">
+    <div class="main-container">
+        <div class="panel">
+            <ul id="menu">
+                <li data-action="paintBucket">
+                    <button type="button"><img src="assets/images/icon-share.png" alt=""/><span>Paint bucket(Q)</span>
+                    </button>
+                </li>
+                <li data-action="chooseColor">
+                    <button type="button"><img src="assets/images/icon-upload.png" alt=""/><span>Choose color(E)</span>
+                    </button>
+                </li>
+                <li data-action="move">
+                    <button type="button"><img src="assets/images/icon-copy.png" alt=""/><span>Move(R)</span>
+                    </button>
+                </li>
+                <li data-action="transform">
+                    <button type="button"><img src="assets/images/icon-shar.png" alt=""/><span>Transform(T)</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="color-panel">
+            <ul id="color-menu">
+                <li data-action="currentColor">
+                    <button type="button"><span>Current color</span>
+                    </button>
+                </li>
+                <li data-action="prevColor">
+                    <button type="button"><span>Prev color</span>
+                    </button>
+                </li>
+                <li data-action="red">
+                    <button type="button"><span>red</span>
+                    </button>
+                </li>
+                <li data-action="blue">
+                    <button type="button"><span>blue</span>
+                    </button>
+                </li>
+                <li data-action="green">
+                    <button type="button"><span>green</span>
+                    </button>
+                </li>
+                <li data-action="purple">
+                    <button type="button"><span>purple</span>
+                    </button>
+                </li>
+                <li data-action="brown">
+                    <button type="button"><span>brown</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="list-scroller">
+            <div class="preview-list-scroller" id="preview-list-scroller">
+            </div>
+            <button type="button" onclick="frame()"><span>Add new frame</span></button>
+        </div>
+        <div class="edit-panel" id="edit">
+        </div>
+        <div class="animation-panel" id="animation">
+            <button id="increase" onclick="increase()">+</button>
+            <div id="fps">
+                <input class="fps-input" id="fps-input" type="range" min="1" max="24" step="1" value="12">
+                <label for="fps-input" id="fps-label"></label>
+            </div>
+            <div id="list-image-animation">
+
+            </div>
+        </div>
+    </div>
+</section>
+<script src="assets/animation.js"></script>
+<script src="assets/addItem.js"></script>
+<script src="assets/Frame.js"></script>
+<script src="assets/MoveFigures.js"></script>
+<script src="assets/functional.js"></script>
+</body>
+</html>
